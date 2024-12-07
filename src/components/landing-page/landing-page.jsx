@@ -55,7 +55,7 @@ export default function LandingPage() {
 
             {/* Projects Section */}
             <section id="projects" className="container mx-auto px-4 py-12">
-                <h1 className="text-4xl font-extrabold mb-12 text-center text-gray-800">
+                <h1 className="text-3xl font-extrabold mb-12 text-center text-gray-800">
                     MY PROJECTS
                 </h1>
                 <div className="grid gap-10 lg:grid-cols-2 xl:grid-cols-3">
@@ -101,21 +101,33 @@ export default function LandingPage() {
                                 </div>
                             </CardContent>
                             <CardFooter className="flex justify-between mt-6">
-                                <Button asChild>
+                                <Button
+                                    asChild
+                                    className="opacity-50 cursor-not-allowed"
+                                    disabled
+                                >
                                     <a
                                         href={project.demo}
                                         target="_blank"
                                         rel="noopener noreferrer"
+                                        className="pointer-events-none"
+                                        aria-disabled={true}
                                     >
                                         View Demo
                                     </a>
                                 </Button>
+
                                 {project.source && (
-                                    <Button asChild variant="secondary">
+                                    <Button asChild variant="secondary"
+                                            className="opacity-50 cursor-not-allowed"
+                                            disabled
+                                    >
                                         <a
                                             href={project.source}
                                             target="_blank"
                                             rel="noopener noreferrer"
+                                            className="pointer-events-none"
+                                            aria-disabled={true}
                                         >
                                             View Source
                                         </a>
