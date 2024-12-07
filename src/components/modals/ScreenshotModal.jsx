@@ -16,13 +16,23 @@ export default function ScreenshotModal({ screenshots, isOpen, onClose }) {
         setCurrentIndex((prev) => (prev === screenshots.length - 1 ? 0 : prev + 1));
     };
 
+    const handleBackdropClick = (e) => {
+        if (e.target.id === "modal-backdrop") {
+            onClose();
+        }
+    };
+
     return (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-75 flex items-center justify-center">
-            <div className="relative w-11/12 max-w-4xl">
+        <div
+            id="modal-backdrop"
+            className="fixed inset-0 z-50 bg-black bg-opacity-75 flex items-center justify-center"
+            onClick={handleBackdropClick}
+        >
+            <div className="relative w-11/12 max-w-4xl bg-white rounded-md overflow-hidden">
                 {/* Close Button */}
                 <button
                     onClick={onClose}
-                    className="absolute top-4 right-4 text-white text-2xl"
+                    className="absolute top-4 right-4 text-black text-2xl"
                 >
                     <FaTimes />
                 </button>
@@ -31,7 +41,7 @@ export default function ScreenshotModal({ screenshots, isOpen, onClose }) {
                     <img
                         src={screenshots[currentIndex]}
                         alt={`Screenshot ${currentIndex + 1}`}
-                        className="rounded-md shadow-lg w-full"
+                        className="w-full h-auto"
                     />
                     {/* Navigation Buttons */}
                     <button
