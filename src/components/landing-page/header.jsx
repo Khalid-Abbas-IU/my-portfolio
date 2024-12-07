@@ -61,7 +61,7 @@ export default function Header() {
                     <Button
                         variant="secondary"
                         asChild
-                        className="px-4 py-2 flex items-center gap-2 text-sm bg-green-500 hover:bg-green-600"
+                        className="px-4 py-2 flex items-center gap-2 text-sm text-white bg-black hover:bg-green-600"
                     >
                         <a
                             href="https://www.upwork.com/freelancers/~01e48daa9d2ab5861a"
@@ -69,8 +69,8 @@ export default function Header() {
                             rel="noopener noreferrer"
                             className="flex justify-center items-center"
                         >
-                            <FaUpwork />
-                            Hire Me on Upwork
+                            <FaUpwork size={20}/>
+                            <span>Hire Me on Upwork</span>
                         </a>
                     </Button>
                 </div>
