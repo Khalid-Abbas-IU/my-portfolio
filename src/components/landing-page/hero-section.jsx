@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { FaGithub } from "react-icons/fa";
-import { TbBrandFiverr } from "react-icons/tb";
+import { TbBrandFiverr,TbBrandLinkedin } from "react-icons/tb";
 
 export default function HeroSection() {
     return (
@@ -40,7 +40,7 @@ export default function HeroSection() {
                         <Button
                             asChild
                             variant="secondary"
-                            className="flex items-center gap-2 px-6 py-3 text-white bg-black hover:bg-purple-600"
+                            className="flex items-center gap-2 px-6 py-3 text-white bg-black hover:bg-black/70"
                         >
                             <a
                                 href="https://www.fiverr.com/khalid_abbasiu"
@@ -49,6 +49,21 @@ export default function HeroSection() {
                             >
                                 <TbBrandFiverr />
                                 View My Fiverr Gigs
+                            </a>
+                        </Button>
+                        {/* Fiverr Button */}
+                        <Button
+                            asChild
+                            variant="secondary"
+                            className="flex items-center gap-2 px-6 py-3 text-white bg-purple-500 hover:bg-purple-600"
+                        >
+                            <a
+                                href="https://www.linkedin.com/in/khalid-abbas-869831193/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <TbBrandLinkedin />
+                                LinkedIn
                             </a>
                         </Button>
                     </div>
