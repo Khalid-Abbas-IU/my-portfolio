@@ -55,7 +55,7 @@ export default function HeroSection() {
                 </div>
 
                 {/* Right Side: Profile Image */}
-                <div className="lg:w-1/2 flex justify-center">
+                <div className="lg:w-1/2 flex justify-end">
                     <img
                         src="/assets/images/profile-pic.png"
                         alt="Profile Picture"
