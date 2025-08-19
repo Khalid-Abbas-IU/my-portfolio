@@ -234,27 +234,33 @@ const ThreeScene = dynamic(() => Promise.resolve(({ containerRef }) => {
 
                 // Create floating geometric shapes with more variety
                 const geometries = [
-                    // Basic shapes
-                    new THREE.BoxGeometry(1, 1, 1),
-                    new THREE.SphereGeometry(0.7, 32, 32),
-                    new THREE.ConeGeometry(0.7, 1.5, 8),
-                    new THREE.OctahedronGeometry(0.8),
-                    new THREE.TorusGeometry(0.7, 0.3, 16, 100),
+                    // Basic shapes - made bigger
+                    new THREE.BoxGeometry(1.5, 1.5, 1.5),
+                    new THREE.SphereGeometry(1.2, 32, 32),
+                    new THREE.ConeGeometry(1.0, 2.0, 8),
+                    new THREE.OctahedronGeometry(1.3),
+                    new THREE.TorusGeometry(1.0, 0.4, 16, 100),
 
-                    // Ring and tube shapes
-                    new THREE.RingGeometry(0.5, 1.2, 16, 5),
-                    new THREE.TorusKnotGeometry(0.8, 0.3, 100, 16),
-                    new THREE.CylinderGeometry(0.3, 0.8, 1.5, 8),
+                    // Ring and tube shapes - bigger
+                    new THREE.RingGeometry(0.8, 1.8, 16, 5),
+                    new THREE.TorusKnotGeometry(1.2, 0.4, 100, 16),
+                    new THREE.CylinderGeometry(0.5, 1.2, 2.0, 8),
 
-                    // Complex shapes
-                    new THREE.DodecahedronGeometry(0.8),
-                    new THREE.IcosahedronGeometry(0.8),
-                    new THREE.TetrahedronGeometry(0.9),
+                    // Complex shapes - bigger
+                    new THREE.DodecahedronGeometry(1.2),
+                    new THREE.IcosahedronGeometry(1.2),
+                    new THREE.TetrahedronGeometry(1.4),
 
-                    // Custom wireframe shapes
-                    new THREE.SphereGeometry(1, 16, 16),
-                    new THREE.BoxGeometry(1.2, 0.2, 1.2),
-                    new THREE.ConeGeometry(0.4, 2, 6),
+                    // Custom wireframe shapes - bigger
+                    new THREE.SphereGeometry(1.5, 16, 16),
+                    new THREE.BoxGeometry(1.8, 0.3, 1.8),
+                    new THREE.ConeGeometry(0.6, 2.5, 6),
+
+                    // Additional complex shapes
+                    new THREE.TorusGeometry(1.2, 0.6, 8, 24),
+                    new THREE.CylinderGeometry(0.8, 0.3, 2.2, 12),
+                    new THREE.RingGeometry(1.0, 2.0, 24),
+                    new THREE.TorusKnotGeometry(1.0, 0.5, 64, 8, 2, 3),
                 ];
 
                 const materials = [
@@ -335,15 +341,15 @@ const ThreeScene = dynamic(() => Promise.resolve(({ containerRef }) => {
                 ];
 
                 // Increase number of objects for more dynamic scene
-                for (let i = 0; i < 25; i++) {
+                for (let i = 0; i < 40; i++) {
                     const geometry = geometries[Math.floor(Math.random() * geometries.length)];
                     const material = materials[Math.floor(Math.random() * materials.length)];
                     const mesh = new THREE.Mesh(geometry, material);
 
                     mesh.position.set(
-                        (Math.random() - 0.5) * 25,
-                        (Math.random() - 0.5) * 25,
-                        (Math.random() - 0.5) * 25
+                        (Math.random() - 0.5) * 35,
+                        (Math.random() - 0.5) * 35,
+                        (Math.random() - 0.5) * 35
                     );
 
                     mesh.rotation.set(
@@ -352,7 +358,8 @@ const ThreeScene = dynamic(() => Promise.resolve(({ containerRef }) => {
                         Math.random() * Math.PI
                     );
 
-                    mesh.scale.setScalar(0.2 + Math.random() * 0.8);
+                    // Make objects bigger and more visible
+                    mesh.scale.setScalar(0.5 + Math.random() * 1.5);
                     mesh.castShadow = true;
                     mesh.receiveShadow = true;
 
@@ -366,33 +373,39 @@ const ThreeScene = dynamic(() => Promise.resolve(({ containerRef }) => {
                         },
                         floatSpeed: Math.random() * 0.02 + 0.01,
                         initialY: mesh.position.y,
-                        floatAmplitude: 0.5 + Math.random() * 1.5
+                        initialX: mesh.position.x,
+                        initialZ: mesh.position.z,
+                        floatAmplitude: 0.5 + Math.random() * 1.5,
+                        attractionStrength: 0.02 + Math.random() * 0.03 // Individual attraction force
                     });
                 }
 
-                // Add some special animated ring groups
-                for (let i = 0; i < 3; i++) {
+                // Add more special animated ring groups
+                for (let i = 0; i < 5; i++) {
                     const ringGroup = new THREE.Group();
 
                     // Create multiple concentric rings
-                    for (let j = 0; j < 3; j++) {
-                        const ringGeometry = new THREE.RingGeometry(0.8 + j * 0.4, 1.0 + j * 0.4, 32);
+                    for (let j = 0; j < 4; j++) {
+                        const ringGeometry = new THREE.RingGeometry(1.2 + j * 0.6, 1.4 + j * 0.6, 32);
                         const ringMaterial = new THREE.MeshBasicMaterial({
-                            color: [0xff6b9d, 0x6b8cff, 0x6bff8c][j],
+                            color: [0xff6b9d, 0x6b8cff, 0x6bff8c, 0xffff6b][j],
                             transparent: true,
-                            opacity: 0.4,
+                            opacity: 0.5,
                             side: THREE.DoubleSide
                         });
                         const ring = new THREE.Mesh(ringGeometry, ringMaterial);
-                        ring.rotation.x = j * Math.PI / 6;
+                        ring.rotation.x = j * Math.PI / 4;
                         ringGroup.add(ring);
                     }
 
                     ringGroup.position.set(
-                        (Math.random() - 0.5) * 30,
-                        (Math.random() - 0.5) * 30,
-                        (Math.random() - 0.5) * 30
+                        (Math.random() - 0.5) * 40,
+                        (Math.random() - 0.5) * 40,
+                        (Math.random() - 0.5) * 40
                     );
+
+                    // Make ring groups bigger
+                    ringGroup.scale.setScalar(0.8 + Math.random() * 1.2);
 
                     scene.add(ringGroup);
                     meshes.push({
@@ -404,19 +417,26 @@ const ThreeScene = dynamic(() => Promise.resolve(({ containerRef }) => {
                         },
                         floatSpeed: Math.random() * 0.015 + 0.005,
                         initialY: ringGroup.position.y,
-                        floatAmplitude: 1.0
+                        initialX: ringGroup.position.x,
+                        initialZ: ringGroup.position.z,
+                        floatAmplitude: 1.0,
+                        attractionStrength: 0.015 + Math.random() * 0.02
                     });
                 }
 
                 console.log('Created', meshes.length, 'objects including rings and complex shapes'); // Debug log
 
-                // Mouse interaction
+                // Mouse interaction with attraction force
                 let mouseX = 0;
                 let mouseY = 0;
+                let mouse3D = new THREE.Vector3();
 
                 const handleMouseMove = (event) => {
                     mouseX = (event.clientX / window.innerWidth) * 2 - 1;
                     mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
+
+                    // Convert mouse position to 3D world coordinates
+                    mouse3D.set(mouseX * 10, mouseY * 10, 0);
                 };
 
                 window.addEventListener('mousemove', handleMouseMove);
