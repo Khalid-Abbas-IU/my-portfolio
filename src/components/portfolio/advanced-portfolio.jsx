@@ -661,8 +661,8 @@ const HeroSection = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
                         {[
-                            { label: 'Projects Completed', value: '10+', icon: FolderOpen },
-                            { label: 'Happy Clients', value: '25+', icon: Mail },
+                            { label: 'Projects Completed', value: '25+', icon: FolderOpen },
+                            { label: 'Happy Clients', value: '30+', icon: Mail },
                             { label: 'Technologies', value: '15+', icon: Code }
                         ].map(({ label, value, icon: Icon }) => (
                             <div key={label} className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10">
@@ -936,8 +936,12 @@ const ProjectsSection = () => {
                         Featured Projects
                     </h2>
                     <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                        Professional web applications and tools built with modern technologies
+                        Showcasing 10 highlighted projects from my portfolio of 25+ professional applications
                     </p>
+                    <div className="mt-4 inline-flex items-center gap-2 bg-blue-600/20 px-4 py-2 rounded-full text-blue-300 text-sm backdrop-blur-sm">
+                        <FolderOpen size={16} />
+                        <span>25+ Total Projects • 10 Featured Below</span>
+                    </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
