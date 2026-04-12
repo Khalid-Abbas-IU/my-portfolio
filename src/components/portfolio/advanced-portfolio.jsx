@@ -591,7 +591,7 @@ const Header = () => {
         return (
             <header className="fixed top-0 w-full z-50 bg-transparent">
                 <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-                    <div className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">K.A</div>
+                    <div className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Khalid</div>
                 </div>
             </header>
         );
@@ -606,7 +606,7 @@ const Header = () => {
             }`}>
                 <div className="px-6 py-3 flex justify-between items-center">
                     <a href="#hero" className="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent hover:from-purple-300 hover:to-pink-300 transition-all">
-                        K.A
+                        Khalid
                     </a>
 
                     <nav className="hidden md:flex items-center gap-1">
