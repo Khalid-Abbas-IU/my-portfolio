@@ -667,25 +667,22 @@ const HeroSection = () => {
                     <div className="mb-6">
                         <div className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/20 px-4 py-2 rounded-full text-purple-300 text-sm backdrop-blur-sm">
                             <Sparkles size={14} />
-                            Full-Stack Developer
+                            Senior Full-Stack Developer · SaaS & Canvas
                         </div>
                     </div>
 
                     <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold mb-6 tracking-tight leading-[1.1]">
-                        <span className="bg-gradient-to-r from-white via-purple-100 to-white bg-clip-text text-transparent">
-                            Khalid Abbas
-                        </span>
-                        <br />
-                        <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent bg-[length:200%_auto] text-shimmer">
-                            Jan
+                        <span className="bg-gradient-to-r from-white via-purple-200 to-pink-300 bg-clip-text text-transparent bg-[length:200%_auto] text-shimmer">
+                            Khalid Abbas Jan
                         </span>
                     </h1>
 
                     <p className="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl leading-relaxed">
-                        Crafting immersive digital experiences with
-                        <span className="text-purple-400 font-medium"> MERN Stack</span>,
-                        <span className="text-pink-400 font-medium"> Canvas/WebGL</span>, and
-                        <span className="text-blue-400 font-medium"> Three.js</span>
+                        Senior full-stack engineer building multi-tenant SaaS and interactive{' '}
+                        <span className="text-purple-400 font-medium">2D canvas</span> tools — React, Next.js, Node.js,
+                        Fabric.js, Konva.js, and{' '}
+                        <span className="text-pink-400 font-medium">AWS</span>
+                        . Fence-industry platforms, estimating, and design tooling.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-3 mb-14">

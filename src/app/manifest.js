@@ -1,8 +1,9 @@
 export default function manifest() {
     return {
-        name: 'Khalid Abbas Jan - Full-Stack Developer Portfolio',
+        name: 'Khalid Abbas Jan — Senior Full-Stack Developer',
         short_name: 'KA Portfolio',
-        description: 'Professional Full-Stack Developer specializing in MERN Stack, Canvas applications, and 3D web development',
+        description:
+            'SaaS, cloud, and interactive 2D canvas tools — React, Next.js, Node.js, Fabric.js, Konva.js, AWS.',
         start_url: '/',
         display: 'standalone',
         background_color: '#000000',

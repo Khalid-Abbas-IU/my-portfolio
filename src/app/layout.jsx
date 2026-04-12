@@ -2,27 +2,29 @@ import "./globals.css";
 
 export const metadata = {
     title: {
-        default: "Khalid Abbas Jan - Full-Stack Developer",
+        default: "Khalid Abbas Jan — Senior Full-Stack Developer (SaaS & Canvas)",
         template: "%s | Khalid Abbas Jan"
     },
-    description: "Full-Stack Developer specializing in MERN Stack, Canvas Expert, and 3D Web Applications. Building innovative solutions with React, Node.js, Three.js, and modern web technologies.",
+    description:
+        "Senior full-stack developer building multi-tenant SaaS and interactive 2D canvas applications — React, Next.js, Node.js, Fabric.js, Konva.js, and AWS. Fence-industry platforms, estimating, and design tooling.",
     keywords: [
-        "Full-Stack Developer",
-        "MERN Stack",
+        "Senior Full-Stack Developer",
+        "SaaS",
         "React Developer",
-        "Node.js",
-        "Three.js",
-        "Canvas Expert",
-        "Web Developer",
-        "JavaScript",
-        "TypeScript",
         "Next.js",
+        "Node.js",
+        "Fabric.js",
+        "Konva.js",
+        "Canvas",
+        "TypeScript",
+        "AWS",
+        "PostgreSQL",
         "MongoDB",
         "Express.js",
-        "AWS",
-        "Fabric.js",
+        "Full-Stack Developer",
+        "Web Developer",
+        "JavaScript",
         "HTML5 Canvas",
-        "3D Web Applications",
         "Khalid Abbas Jan"
     ],
     authors: [{ name: "Khalid Abbas Jan" }],
@@ -31,22 +33,24 @@ export const metadata = {
         type: "website",
         locale: "en_US",
         url: "https://khalid-abbas-portfolio.vercel.app",
-        title: "Khalid Abbas Jan - Full-Stack Developer & Canvas Expert",
-        description: "Professional Full-Stack Developer specializing in MERN Stack and 3D web applications. View my portfolio of innovative projects and professional experience.",
+        title: "Khalid Abbas Jan — Senior Full-Stack Developer (SaaS & Canvas)",
+        description:
+            "Multi-tenant SaaS, interactive 2D canvas tools, React/Next.js, Node.js, AWS — portfolio and experience.",
         siteName: "Khalid Abbas Jan Portfolio",
         images: [
             {
                 url: "/assets/images/og-image.png",
                 width: 1200,
                 height: 630,
-                alt: "Khalid Abbas Jan - Full-Stack Developer Portfolio"
+                alt: "Khalid Abbas Jan — Senior Full-Stack Developer Portfolio"
             }
         ]
     },
     twitter: {
         card: "summary_large_image",
-        title: "Khalid Abbas Jan - Full-Stack Developer",
-        description: "Professional Full-Stack Developer specializing in MERN Stack and 3D web applications.",
+        title: "Khalid Abbas Jan — Senior Full-Stack Developer",
+        description:
+            "SaaS, cloud, and interactive 2D canvas tools — React, Next.js, Node.js, Fabric.js, Konva.js, AWS.",
         images: ["/assets/images/og-image.png"],
         creator: "@khalid_abbas_iu"
     },
@@ -108,8 +112,9 @@ export default function RootLayout({ children }) {
                         "@context": "https://schema.org",
                         "@type": "Person",
                         "name": "Khalid Abbas Jan",
-                        "jobTitle": "Full-Stack Developer",
-                        "description": "Professional Full-Stack Developer specializing in MERN Stack, Canvas applications, and 3D web development",
+                        "jobTitle": "Senior Full-Stack Developer",
+                        "description":
+                            "Senior full-stack developer building multi-tenant SaaS and interactive 2D canvas applications with React, Next.js, Node.js, Fabric.js, Konva.js, and AWS",
                         "url": "https://khalid-abbas-portfolio.vercel.app",
                         "sameAs": [
                             "https://github.com/Khalid-Abbas-IU",
@@ -121,15 +126,17 @@ export default function RootLayout({ children }) {
                             "JavaScript",
                             "TypeScript",
                             "React",
+                            "Next.js",
                             "Node.js",
                             "MongoDB",
+                            "PostgreSQL",
                             "Express.js",
-                            "Three.js",
                             "Canvas API",
                             "Fabric.js",
+                            "Konva.js",
                             "AWS",
-                            "Next.js",
-                            "Tailwind CSS"
+                            "Tailwind CSS",
+                            "SaaS"
                         ],
                         "alumniOf": {
                             "@type": "Organization",
