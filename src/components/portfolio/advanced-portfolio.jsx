@@ -10,7 +10,10 @@ import {
     Menu, ArrowRight, Layers, Monitor, Wrench, Sparkles, Award
 } from 'lucide-react';
 
-const projects = [
+/** Display order: flagship work first, then the rest by original id. */
+const FEATURED_FIRST_ORDER = [13, 19, 12, 20];
+
+const projectsData = [
     {
         id: 1,
         title: "PDF Stamper Tool",
@@ -309,6 +312,14 @@ const projects = [
         featured: true,
     },
 ];
+
+const projects = [...projectsData].sort((a, b) => {
+    const rank = (id) => {
+        const i = FEATURED_FIRST_ORDER.indexOf(id);
+        return i === -1 ? 1000 + id : i;
+    };
+    return rank(a.id) - rank(b.id);
+});
 
 const CATEGORIES = ["All", "SaaS Platform", "Design Tool", "Engineering Tool", "Other"];
 
@@ -1259,14 +1270,14 @@ const ContactSection = () => {
                             <Button
                                 size="lg"
                                 className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white px-8 rounded-xl"
-                                onClick={() => window.open('https://www.upwork.com', '_blank')}
+                                onClick={() => window.open('https://www.upwork.com/freelancers/~01e48daa9d2ab5861a', '_blank')}
                             >
                                 Hire on Upwork
                             </Button>
                             <Button
                                 size="lg"
                                 className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white px-8 rounded-xl"
-                                onClick={() => window.open('https://www.fiverr.com', '_blank')}
+                                onClick={() => window.open('https://www.fiverr.com/khalid_abbasiu', '_blank')}
                             >
                                 View Fiverr Gigs
                             </Button>
