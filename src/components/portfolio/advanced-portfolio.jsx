@@ -709,7 +709,7 @@ const HeroSection = () => {
                         <Button
                             size="lg"
                             variant="outline"
-                            className="border-white/20 text-gray-300 hover:bg-white/10 hover:text-white px-8 py-5 text-base rounded-xl"
+                            className="border-white/20 text-gray-700 hover:bg-white/10 hover:text-white px-8 py-5 text-base rounded-xl"
                             onClick={() => window.open('https://github.com/Khalid-Abbas-IU', '_blank')}
                         >
                             <Github className="mr-2" size={18} />
