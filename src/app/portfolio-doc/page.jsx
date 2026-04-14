@@ -636,8 +636,8 @@ export default function PortfolioDocPage() {
                         </h1>
                         <p className="subtitle-text text-gray-400 mb-1">Senior Full-Stack Developer &middot; SaaS Architect &middot; Canvas/2D Design Tools Expert</p>
                         <p className="contact-text text-sm text-gray-500 mb-6">
-                            Lahore, Pakistan &nbsp;|&nbsp; khalid.abbas.iu@gmail.com &nbsp;|&nbsp; (+92) 0314-8880956
-                            <br />
+                            {/* Lahore, Pakistan &nbsp;|&nbsp; khalid.abbas.iu@gmail.com &nbsp;|&nbsp; (+92) 0314-8880956
+                            <br /> */}
                             <a href="https://my-portfolio-six-tawny-89.vercel.app" className="text-purple-400 hover:text-purple-300">Portfolio</a>
                             &nbsp;&middot;&nbsp;
                             <a href="https://github.com/Khalid-Abbas-IU" className="text-purple-400 hover:text-purple-300">GitHub</a>
@@ -721,10 +721,10 @@ export default function PortfolioDocPage() {
                         <p className="font-semibold text-white mb-1">Khalid Abbas</p>
                         <p>Senior Full-Stack Developer &middot; SaaS &amp; Canvas Expert</p>
                         <p className="mt-2">
-                            <a href="mailto:khalid.abbas.iu@gmail.com" className="text-purple-400">khalid.abbas.iu@gmail.com</a>
+                            {/* <a href="mailto:khalid.abbas.iu@gmail.com" className="text-purple-400">khalid.abbas.iu@gmail.com</a>
                             &nbsp;&middot;&nbsp; (+92) 0314-8880956
                         </p>
-                        <p className="mt-1">
+                        <p className="mt-1"> */}
                             <a href="https://my-portfolio-six-tawny-89.vercel.app" className="text-purple-400">Portfolio</a>
                             &nbsp;&middot;&nbsp;
                             <a href="https://github.com/Khalid-Abbas-IU" className="text-purple-400">GitHub</a>
