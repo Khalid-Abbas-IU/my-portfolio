@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import {
     Github, Home, FolderOpen, Mail, Code, Box, Rocket, ExternalLink,
     Play, ChevronLeft, ChevronRight, X, GitBranch, Star, Users,
-    Menu, ArrowRight, Layers, Monitor, Wrench, Sparkles, Award
+    Menu, ArrowRight, Layers, Monitor, Wrench, Sparkles, Award, FileText
 } from 'lucide-react';
 
 /** Display order: flagship work first, then the rest by original id. */
@@ -305,7 +305,7 @@ const projectsData = [
             "/assets/projects/mep-design-tool/mep-calculations.png",
         ],
         technologies: ["React 19", "Vite", "Konva", "pdfjs-dist", "jsPDF", "Tailwind CSS", "Radix UI", "Fastify", "Prisma"],
-        demo: "#",
+        demo: "https://mep-design-tool.vercel.app/",
         source: "#",
         color: "#e84393",
         category: "Engineering Tool",
@@ -584,7 +584,8 @@ const Header = () => {
     const navLinks = [
         { icon: Home, label: 'Home', href: '#hero' },
         { icon: FolderOpen, label: 'Projects', href: '#projects' },
-        { icon: Mail, label: 'Contact', href: '#contact' }
+        { icon: Mail, label: 'Contact', href: '#contact' },
+        { icon: FileText, label: 'Portfolio Doc', href: '/portfolio-doc' }
     ];
 
     if (!isMounted) {
